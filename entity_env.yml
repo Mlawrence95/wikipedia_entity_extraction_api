@@ -1,0 +1,17 @@
+name: entity-env
+channels:
+    - defaults
+    - anaconda
+    - conda-forge
+dependencies:
+  - beautifulsoup4
+  - flask
+  - ipykernel
+  - jupyter
+  - matplotlib
+  - numpy
+  - pandas
+  - python=3.7
+  - requests
+  - spacy==2.2.3
+  - spacy-model-en_core_web_sm
