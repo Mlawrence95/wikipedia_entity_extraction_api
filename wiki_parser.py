@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import spacy
 import json
 import logging
@@ -14,6 +15,7 @@ def get_wiki_entities(url):
     # test url = "https://en.wikipedia.org/wiki/Manhattan_Project"
 
     page_data = import_url_data(url)
+    logger.info('Getting page data...')
     if page_data is not None:
         parsed    = BeautifulSoup(page_data, 'html.parser')
         sentences = format_content('p', parsed_html=parsed)
@@ -24,7 +26,7 @@ def get_wiki_entities(url):
             labels += [str(e.label_) for e in new_entities]
             ents   += [str(e)        for e in new_entities]
 
-        response['data'] = {
+        response['response_data'] = {
             "entities":  ents,
             "ent_types": labels
         }
