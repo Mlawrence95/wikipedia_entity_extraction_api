@@ -11,7 +11,7 @@ payload = {
 address = "http://127.0.0.1"
 port    = '5000'
 
-
+# TODO: mock endpoints
 if __name__ == "__main__":
     # send request
     r = requests.get(f'{address}:{port}/wiki-entities', params=payload)

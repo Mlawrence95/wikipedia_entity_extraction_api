@@ -4,7 +4,7 @@ import json
 import logging
 
 from bs4             import BeautifulSoup
-from wikipedia_utils import import_url_data, format_content
+from app.wikipedia_utils import import_url_data, format_content
 
 nlp    = spacy.load('en_core_web_sm')
 logger = logging.getLogger(__name__)
