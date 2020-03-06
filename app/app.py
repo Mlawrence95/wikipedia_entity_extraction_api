@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 from flask import Flask, request
-from app.wiki_parser import get_wiki_entities
+from wiki_parser import get_wiki_entities
 
 logger  = logging.getLogger(__name__)
 app     = Flask(__name__)
