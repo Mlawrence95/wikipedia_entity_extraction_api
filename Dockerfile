@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3
+FROM continuumio/miniconda3:4.7.12
 
 COPY . /usr/REST_app/
 
@@ -6,8 +6,12 @@ WORKDIR /usr/REST_app
 
 RUN conda env create -f environment.yml
 
-EXPOSE 5000
-
 WORKDIR /usr/REST_app/app
 
-ENTRYPOINT ["bash"]
+RUN echo "/opt/conda/bin/conda activate myenv" > ~/.bashrc
+
+SHELL ["conda", "run", "-n", "entity-env", "/bin/bash", "-c"]
+
+EXPOSE 5000
+
+ENTRYPOINT python app.py
