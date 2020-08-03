@@ -30,13 +30,11 @@ To the endpoint `/wiki-entities`. It returns a response with the (rough) schema:
 (This is a fake example)
 
 
-# To use the app, you have two options: Source or Docker
+# Using the App (Source or Docker)
 
 
 ## 1) Source
 Having `conda` installed on your machine, you can run `conda env create -f environment.yml` in this repo. From there, activate your environment with `conda activate entity-env`. In the environment, cd into `app/`, and then run `python app.py`. Ta-da! Your app should now be running on localhost on port 5000. Feel free to change the port in `app.py`.
-
-
 
 
 ## 2) Docker 
