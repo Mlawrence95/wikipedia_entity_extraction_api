@@ -4,12 +4,9 @@ channels:
     - anaconda
     - conda-forge
 dependencies:
-  - beautifulsoup4==4.8.1
-  - flask==1.1.1
-  - matplotlib==3.1.3
-  - numpy==1.18.1
-  - pandas==1.0.1
-  - python==3.7
-  - requests==2.23.0
-  - spacy==2.2.3
-  - spacy-model-en_core_web_sm==2.2.5
+  - beautifulsoup4==4.8.1 # 4.10.0 has noarch
+  - flask==1.1.1 # any here or later is good
+  - python
+  - requests==2.26.0
+  - spacy==3.1.0
+  - spacy-model-en_core_web_sm==3.1.0
