@@ -14,7 +14,7 @@ RUN conda update -n base -c defaults conda \
 
 WORKDIR /usr/REST_app/app
 
-RUN echo "/opt/conda/bin/conda activate myenv" > ~/.bashrc
+RUN echo "/opt/conda/bin/conda activate entity-env" > ~/.bashrc
 
 SHELL ["conda", "run", "-n", "entity-env", "/bin/bash", "-c"]
 
